@@ -29,7 +29,8 @@
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
+							"type": "AzureBlobStorageWriteSettings",
+							"copyBehavior": "FlattenHierarchy"
 						},
 						"formatSettings": {
 							"type": "DelimitedTextWriteSettings",
@@ -37,7 +38,49 @@
 							"fileExtension": ".txt"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"path": "$['data_set']"
+								},
+								"sink": {
+									"name": "data_set",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['Company']"
+								},
+								"sink": {
+									"name": "Company",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['State']"
+								},
+								"sink": {
+									"name": "State",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"path": "$['OrganisationCode']"
+								},
+								"sink": {
+									"name": "OrganisationCode",
+									"type": "String"
+								}
+							}
+						],
+						"collectionReference": "$['organisations']"
+					}
 				},
 				"inputs": [
 					{

@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "simple_for_load.json",
+				"fileName": "organisations_1.json",
 				"container": "input"
 			}
 		},
@@ -20,20 +20,20 @@
 				"data_set": {
 					"type": "string"
 				},
-				"extract_date": {
-					"type": "string"
-				},
-				"organisation": {
-					"type": "object",
-					"properties": {
-						"name": {
-							"type": "string"
-						},
-						"state": {
-							"type": "string"
-						},
-						"org_code": {
-							"type": "string"
+				"organisations": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Company": {
+								"type": "string"
+							},
+							"State": {
+								"type": "string"
+							},
+							"OrganisationCode": {
+								"type": "string"
+							}
 						}
 					}
 				}
