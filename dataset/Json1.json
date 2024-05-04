@@ -1,0 +1,43 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "simple_for_load.json",
+				"container": "input"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"data_set": {
+					"type": "string"
+				},
+				"extract_date": {
+					"type": "string"
+				},
+				"organisation": {
+					"type": "object",
+					"properties": {
+						"name": {
+							"type": "string"
+						},
+						"state": {
+							"type": "string"
+						},
+						"org_code": {
+							"type": "string"
+						}
+					}
+				}
+			}
+		}
+	}
+}
