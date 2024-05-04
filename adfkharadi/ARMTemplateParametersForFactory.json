@@ -7,6 +7,18 @@
 		},
 		"AzureBlobStorage1_connectionString": {
 			"value": ""
+		},
+		"lsAzureSql_connectionString": {
+			"value": ""
+		},
+		"Azure-SSIS_properties_typeProperties_ssisProperties_catalogInfo_catalogServerEndpoint": {
+			"value": "azsqlkhradi.database.windows.net"
+		},
+		"Azure-SSIS_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminUserName": {
+			"value": "sqladmin"
+		},
+		"Azure-SSIS_properties_typeProperties_ssisProperties_catalogInfo_catalogAdminPassword": {
+			"value": ""
 		}
 	}
 }
